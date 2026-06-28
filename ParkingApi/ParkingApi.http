@@ -1,0 +1,66 @@
+@ParkingApi_HostAddress = http://localhost:5137
+
+### GET /parking - Get available and occupied spaces
+GET {{ParkingApi_HostAddress}}/parking
+Accept: application/json
+
+###
+
+### POST /parking - Park a vehicle
+POST {{ParkingApi_HostAddress}}/parking
+Content-Type: application/json
+
+{
+  "vehicleReg": "ABC123",
+  "vehicleType": 1
+}
+
+###
+
+### POST /parking - Park a vehicle
+POST {{ParkingApi_HostAddress}}/parking
+Content-Type: application/json
+
+{
+  "vehicleReg": "BAC123",
+  "vehicleType": 2
+}
+
+###
+
+### POST /parking - Park a vehicle
+POST {{ParkingApi_HostAddress}}/parking
+Content-Type: application/json
+
+{
+  "vehicleReg": "CAB123",
+  "vehicleType": 3
+}
+
+###
+
+### POST /parking/exit - Exit from parking
+POST {{ParkingApi_HostAddress}}/parking/exit
+Content-Type: application/json
+
+{
+  "vehicleReg": "ABC123"
+}
+
+### POST /parking/exit - Exit from parking
+POST {{ParkingApi_HostAddress}}/parking/exit
+Content-Type: application/json
+
+{
+  "vehicleReg": "BAC123"
+}
+
+### POST /parking/exit - Exit from parking
+POST {{ParkingApi_HostAddress}}/parking/exit
+Content-Type: application/json
+
+{
+  "vehicleReg": "CAB123"
+}
+
+###
